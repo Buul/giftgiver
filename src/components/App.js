@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+
 import '../styles/app.scss';
 
 class App extends Component {
-  handleChange = param => {
-    console.log(param);
+  constructor() {
+    super();
+    this.state = {
+      gifts: [],
+    };
+  }
+
+  handleClick = () => {
+    const { gifts } = this.state;
+
+    const ids = gifts.map(gift => gift.id);
+    const maxId = ids.length > 0 ? Math.max(...ids) : 0;
+    gifts.push({ id: maxId + 1 });
+    this.setState({ gifts });
   };
 
   render() {
     return (
       <div id="boiler">
-        <h1>React Easy Boilerplate</h1>
-        <button type="button" onClick={() => this.handleChange('TEST ECMA6')}>
-          ECMA6
-        </button>
-        <p>Teste Sass</p>
+        <h2>Gift Giver</h2>
+        <Button variant="contained" color="primary" id="btnAdd" onClick={this.handleClick}>
+          Add Gift
+        </Button>
       </div>
     );
   }

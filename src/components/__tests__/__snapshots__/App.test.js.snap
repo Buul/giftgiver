@@ -20,18 +20,17 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          React Easy Boilerplate
-        </h1>,
-        <button
+        <h2>
+          Gift Giver
+        </h2>,
+        <WithStyles(Button)
+          color="primary"
+          id="btnAdd"
           onClick={[Function]}
-          type="button"
+          variant="contained"
         >
-          ECMA6
-        </button>,
-        <p>
-          Teste Sass
-        </p>,
+          Add Gift
+        </WithStyles(Button)>,
       ],
       "id": "boiler",
     },
@@ -42,35 +41,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "React Easy Boilerplate",
+          "children": "Gift Giver",
         },
         "ref": null,
-        "rendered": "React Easy Boilerplate",
-        "type": "h1",
+        "rendered": "Gift Giver",
+        "type": "h2",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": "ECMA6",
+          "children": "Add Gift",
+          "color": "primary",
+          "id": "btnAdd",
           "onClick": [Function],
-          "type": "button",
+          "variant": "contained",
         },
         "ref": null,
-        "rendered": "ECMA6",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Teste Sass",
-        },
-        "ref": null,
-        "rendered": "Teste Sass",
-        "type": "p",
+        "rendered": "Add Gift",
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -82,18 +72,17 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            React Easy Boilerplate
-          </h1>,
-          <button
+          <h2>
+            Gift Giver
+          </h2>,
+          <WithStyles(Button)
+            color="primary"
+            id="btnAdd"
             onClick={[Function]}
-            type="button"
+            variant="contained"
           >
-            ECMA6
-          </button>,
-          <p>
-            Teste Sass
-          </p>,
+            Add Gift
+          </WithStyles(Button)>,
         ],
         "id": "boiler",
       },
@@ -104,35 +93,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "React Easy Boilerplate",
+            "children": "Gift Giver",
           },
           "ref": null,
-          "rendered": "React Easy Boilerplate",
-          "type": "h1",
+          "rendered": "Gift Giver",
+          "type": "h2",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": "ECMA6",
+            "children": "Add Gift",
+            "color": "primary",
+            "id": "btnAdd",
             "onClick": [Function],
-            "type": "button",
+            "variant": "contained",
           },
           "ref": null,
-          "rendered": "ECMA6",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Teste Sass",
-          },
-          "ref": null,
-          "rendered": "Teste Sass",
-          "type": "p",
+          "rendered": "Add Gift",
+          "type": [Function],
         },
       ],
       "type": "div",
