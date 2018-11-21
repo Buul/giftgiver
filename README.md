@@ -10,8 +10,8 @@ Easy boilerplate for React 16, Webpack 4, React Router 4
 * Jest and Enzyme
 
 ## Installation
-* `git clone https://github.com/Buul/react-easy-boilerplate.git`
-* cd react-easy-boilerplate
+* `git clone https://github.com/Buul/giftgiver.git`
+* cd giftgiver
 * npm install
 
 ### run

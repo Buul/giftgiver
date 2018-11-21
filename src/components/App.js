@@ -21,9 +21,15 @@ class App extends Component {
   };
 
   render() {
+    const { gifts } = this.state;
     return (
       <div id="boiler">
         <h2>Gift Giver</h2>
+        <div id="giftList">
+          {gifts.map(gift => (
+            <div key={gift.id} />
+          ))}
+        </div>
         <Button variant="contained" color="primary" id="btnAdd" onClick={this.handleClick}>
           Add Gift
         </Button>

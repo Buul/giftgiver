@@ -23,6 +23,9 @@ ShallowWrapper {
         <h2>
           Gift Giver
         </h2>,
+        <div
+          id="giftList"
+        />,
         <WithStyles(Button)
           color="primary"
           id="btnAdd"
@@ -46,6 +49,18 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Gift Giver",
         "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "id": "giftList",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -75,6 +90,9 @@ ShallowWrapper {
           <h2>
             Gift Giver
           </h2>,
+          <div
+            id="giftList"
+          />,
           <WithStyles(Button)
             color="primary"
             id="btnAdd"
@@ -98,6 +116,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Gift Giver",
           "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "id": "giftList",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
         },
         Object {
           "instance": null,
