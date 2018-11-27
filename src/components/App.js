@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-
+import { Button } from 'react-bootstrap';
+import Gift from './Gift';
 import '../styles/app.scss';
+import { maxNumber } from '../helper';
 
 class App extends Component {
   constructor() {
@@ -13,11 +14,15 @@ class App extends Component {
 
   handleClick = () => {
     const { gifts } = this.state;
-
     const ids = gifts.map(gift => gift.id);
-    const maxId = ids.length > 0 ? Math.max(...ids) : 0;
-    gifts.push({ id: maxId + 1 });
+    gifts.push({ id: maxNumber(ids) + 1 });
     this.setState({ gifts });
+  };
+
+  handleRemoveGift = id => {
+    const { gifts } = this.state;
+    const giftsFilter = gifts.filter(gift => gift.id !== id);
+    this.setState({ gifts: giftsFilter });
   };
 
   render() {
@@ -27,10 +32,10 @@ class App extends Component {
         <h2>Gift Giver</h2>
         <div id="giftList">
           {gifts.map(gift => (
-            <div key={gift.id} />
+            <Gift gift={gift} key={gift.id} removeGift={this.handleRemoveGift} />
           ))}
         </div>
-        <Button variant="contained" color="primary" id="btnAdd" onClick={this.handleClick}>
+        <Button id="btnAdd" className="btn btn-success" onClick={this.handleClick}>
           Add Gift
         </Button>
       </div>

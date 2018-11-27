@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 
-const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-  },
-});
 class Gift extends Component {
   constructor() {
     super();
@@ -22,34 +10,35 @@ class Gift extends Component {
     };
   }
 
-  handleChange = name => event => {
-    this.setState({
-      person: event.target.value,
-    });
-  };
-
   render() {
-    const { classes } = this.props;
-    const { person } = this.state;
+    const { removeGift, gift } = this.props;
+    const { present, person } = this.state;
     return (
-      <form className={classes.container} noValidate autoComplete="off">
-        <TextField
-          id="person"
-          label="Person"
-          className={classes.textField}
-          value={person}
-          //   onChange={this.handleChange('person')}
-          onChange={event => this.setState({ person: event.target.value })}
-          margin="normal"
-          variant="outlined"
-        />
-      </form>
+      <div className="gift">
+        <Form>
+          <FormGroup>
+            <ControlLabel>Person</ControlLabel>
+            <FormControl
+              id="inputPerson"
+              text={person}
+              onChange={event => this.setState({ person: event.target.value })}
+            />
+          </FormGroup>
+          <FormGroup>
+            <ControlLabel>Present</ControlLabel>
+            <FormControl
+              text={present}
+              id="inputPresent"
+              onChange={event => this.setState({ present: event.target.value })}
+            />
+          </FormGroup>
+        </Form>
+        <Button className="btn btn-danger" id="btnRemove" onClick={() => removeGift(gift.id)}>
+          Remove Gift
+        </Button>
+      </div>
     );
   }
 }
 
-Gift.propTypes = {
-  classes: PropTypes.shape.isRequired,
-};
-
-export default withStyles(styles)(Gift);
+export default Gift;
